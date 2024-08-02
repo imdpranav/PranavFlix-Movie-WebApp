@@ -1,0 +1,125 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ED6A5A;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+nav{
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+nav h1{
+    color: #E6EBE0;
+}
+.search{
+    background-color: #9BC1BC;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 15px;
+    outline: 0;
+}
+.search::placeholder{
+    color: black;
+}
+.modeBtn{
+    background-color: #9BC1BC;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 15px;
+    outline: 0;
+}
+.lightMode{
+    background-color: #ED6A5A;
+}
+.darkMode{
+    background-color: black;
+    .search{
+        border: 2px solid white;
+        background-color: #ED6A5A
+    }
+    .modeBtn{
+        border: 2px solid white;
+        background-color: #ED6A5A
+    }
+    .movie{
+    background-color: #ED6A5A;
+    }
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.movie{
+    width: 400px;
+    margin: 16px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #9BC1BC;
+    position: relative;
+    overflow: hidden;
+}
+.movie img{
+    width: 100%;
+}
+.movieInfo{
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 16px;
+}
+.movieInfo h3{
+    margin-top: 0;
+}
+.movieInfo span{
+    background-color: #212227;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.rating{
+    color: #E6EBE0;
+}
+.movieInfo span.green{
+    color: lightgreen;
+}
+.movieInfo span.orange{
+    color: orange;
+}
+.movieInfo span.red{
+    color: red;
+}
+.desp{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    max-height: 100%;
+    background-color: white;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+}
+.movie:hover .desp{
+    transform: translateY(0);
+}
+@media only screen and (max-width: 865px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 30px;
+        gap: 20px;
+    }
+    .modeBtn{
+        width: 230px;
+    }
+}
