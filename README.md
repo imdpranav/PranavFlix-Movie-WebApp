@@ -39,7 +39,8 @@ const API_KEY = 'your_api_key_here';
 
 * The homepage displays popular movies by default
 * Use the search bar to find specific movies
-* Hover on movie to view its description
+* Click on Name Icon (PranavFlix) to go back to home page
+* Hover on movies to view its description
 * Toggle between light and dark mode using the button in the navigation bar
 
 ## Contributing
